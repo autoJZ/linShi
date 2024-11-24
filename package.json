@@ -1,0 +1,32 @@
+{
+  "name": "douyinzhibozhanbang1",
+  "version": "1.0.0",
+  "main": "test.js",
+  "bin": "test.js",
+  "scripts": {
+    "start": "node test.js",
+    "build": "pkg ."
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "moment": "^2.30.1",
+    "puppeteer": "^23.6.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "random-useragent": "^0.5.0",
+    "ws": "^8.18.0"
+  },
+  "pkg": {
+    "targets": [
+      "node18-win-x64"
+    ],
+    "assets": [
+      "node_modules/puppeteer-extra-plugin-stealth/**/*",
+      "node_modules/puppeteer/.local-chromium/**/*"
+    ],
+    "public": true,
+    "scripts": [
+      "node_modules/puppeteer/**/*.js"
+    ]
+  }
+}
